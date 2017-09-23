@@ -1,0 +1,29 @@
+/*Implement the Person class here*/
+Person::Person(){
+	firstname= ' ';
+	lastname= ' ';
+}
+
+Person::Person(string first, string last){
+	firstName=first;
+	lastName=last;
+}
+
+void Person::setFirstName( string first){
+	firstname=first;
+}
+
+void Person::setLastName(string last){
+	lastName=last;
+}
+
+string Person::getFirstName(){
+	return firstName;
+}
+
+string Person::getLastName(){
+	return lastName;
+}
+void Person::printInfo(){
+	cout<< firstName<<" "<<lastName<<endl;
+}

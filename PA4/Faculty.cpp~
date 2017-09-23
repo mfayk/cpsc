@@ -1,0 +1,55 @@
+/*Implemant the Faculty class here*/
+Faculty::Faculty()
+{
+ title = " ";
+ building = " ";
+ officeNumber = 0;
+}
+
+Faculty:Faculty(string title1, string building1, string ptitle1, string pbuilding1, int officeNumber1)
+{
+ title = title1;
+ building = building1; 
+ ptitle = ptitle1;
+ pbuilding = pbuilding1;
+ officeNumber = officeNumber1;
+}
+ 
+void setTitle(string title1)
+{
+title = title1;
+}
+
+string getTitle()
+{
+return title;
+}
+
+void setBuilding(string building1)
+{
+building = building1;
+}
+
+void setOfficeNumber(int officeNumber1)
+{
+officeNumber = officeNumber1;
+}
+
+string getBuilding()
+{
+return building;
+}
+
+int getOfficeNumber()
+{
+return officeNumber;
+}
+
+void printInfo()
+{
+cout<<"*****************************\n";
+cout<< title<<endl;
+cout<< officeNumber<< " " << building<<endl;
+cout<<"*****************************\n";
+}
+

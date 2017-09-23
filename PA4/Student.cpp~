@@ -1,0 +1,75 @@
+/*Implement the Student class here*/
+Student::Student(){
+	GPA=0.0;
+	classStanding=" ";
+	maxCredit=0;
+	curCredit=0;
+}
+
+Student::Student(string fName, string lName, float sgpa, string sclass,
+			    int smaxCredit, int scurCredit){
+	GPA=sgpa;
+	classStanding=sclass;
+	maxCredit=smaxCredit;
+	curCredit=scurCredit;
+}
+
+void Student::setGPA(float gpa){
+	GPA=gpa;
+}
+
+void Student::setClassStanding(string standing){
+	classStanding=standing;
+}
+
+void Student::setCurCredit(int credit){
+	curCredit=credit;
+}
+
+float getGPA(){
+	return GPA;
+}
+
+string getClassStanding(){
+	return classStanding;
+}
+
+int getCurCredit(){
+	return curCredit;
+}
+
+int getMaxCredit(float g, string c){
+	g=GPA;
+	c=classStanding;
+	if(c=="Freshman"){
+		if(curCredit>0 && GPA>2.5){
+			return 15;
+		}
+		if(curCredit>0 && GPA<2.5){
+			return 12;
+		}
+		if(curCredit==0){
+			return 15;
+		}
+	}
+	if(c==Sophmore || c==Junior || c==Senior){
+		if(GPA>2.5){
+			return 18;
+		}
+		else{
+			return 12;		
+		}
+	}	
+}
+
+void printInfo(){
+	int k;
+	k=getMaxCredit(GPA,ClassStanding);
+	cout<<"*****************************\n";
+	cout<<"Name:\t\t"<<firstName<<" "<<lastName<<endl;
+	cout<<"GPA;\t\t"<<GPA<<endl;
+	cout<<"category: \t"<<classStanding<<endl;
+	cout<<"Maximum Credit:\t"<<k<<endl;
+	cout<<"Current Credit:\t"<<curCredit<<endl;
+	cout<<"*****************************\n";
+}
